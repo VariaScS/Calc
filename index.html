@@ -1,0 +1,41 @@
+<!DOCTYPE html>                            <!--обьявлена версия html-->
+<html lang="en">                           <!--начало html документа, обьявлен язык страницы-->
+<head>                                     <!--начало блока с метаданными-->
+  <meta charset="UTF-8">                   <!--кодировка-->
+  <title>Калькулятор</title>               <!--надпись на вкладке браузера-->
+  <link rel="stylesheet" href="style.css"> <!--подключиение файла стилей-->
+</head>                                    <!--конец блока с метаданными-->
+<body>                                     <!--начало видимой части сайта-->
+  <div class="calc">                         <!--общий блок калькулятора-->
+      <div class="calc-screen" id="screen">                <!--блок  экран калькулятора-->
+        <p>0</p>                                  <!--значение на экране-->
+      </div>  
+      <div class="buttons">                    <!--блок с кнопками-->
+        <div class="btn ac bg-Pt" id="Backspace">ac</div>   <!--блоки отдельно для каждой кнопки, добавлены id для реализации ввода с клавиатуры-->
+        <div class="btn plus-minus bg-Pt">+/-</div>     
+        <div class="btn percent bg-Pt">%</div>
+        <div class="btn division bg-Dt" id="/">/</div>
+
+        <div class="btn seven" id="7">7</div>
+        <div class="btn eight" id="8">8</div>
+        <div class="btn nine" id="9">9</div>
+        <div class="btn multiply bg-Dt" id="*">X</div>
+
+        <div class="btn four" id="4">4</div>
+        <div class="btn five" id="5">5</div>
+        <div class="btn six" id="6">6</div>
+        <div class="btn minus bg-Dt" id="-">-</div>
+
+        <div class="btn one" id="1">1</div>
+        <div class="btn two" id="2">2</div>
+        <div class="btn three" id="3">3</div>
+        <div class="btn plus bg-Dt" id="+">+</div>
+
+        <div class="btn zero" id="0">0</div>
+        <div class="btn dot" id=".">.</div>
+        <div class="btn equal bg-Dt" id="Enter">=</div>
+      </div> <!--конец блокак с кнопками-->
+  </div>  <!--конец блока калькулятора-->
+  <script src="calc.js"></script>                 <!--подключение файла с кодом js-->
+</body>                                     <!--конец видимой части сайта-->
+</html>                                  <!--конец html документа-->

@@ -1,0 +1,89 @@
+/* цвета:
+bg   #005959 - фон всего калькулятора
+Dt   #00CED1 - кнопки действий
+Pt   #acecec - остальные кнопки
+     #157b76 - цифры
+     #000000 - черный
+*/
+
+.calc {                                                   /*стиль основного блока*/
+  margin: 50px auto;                                      /*выравнивание посередине 1-в,н 2-л,п*/
+  width: 300px;                                           /*ширина*/
+  height: 500px;                                          /*высота*/
+  border: 10px solid #000000;                           /*рамка(размер,тип-сплошная, цвет)*/
+  border-radius: 20px;                                    /*скругление*/
+  background: #005959;                                  /*цвет фона*/
+  color: #000000;                                       /*цвет шрифта*/
+  font-family: Arial;                                     /*шрифт*/
+  padding: 18px;                                          /*внутренний отступ*/
+  box-shadow: 12px 5px 5px #4f4f4f;                      /*тень (ширина тени, размытие, смещение, цвет */
+}
+
+.calc-screen {                                            /*стиль блока экрана калькулятора*/
+  height: 125px;                                          /*высота*/
+  padding: 8px;                                           /*внутренний отступ*/
+  display: grid;                                          /*для перемещения потомков элемента в необходимое место*/
+  justify-items: end;                                     /*в конец по продольной оси*/
+  align-items: end;                                       /*в конец по поперечной оси*/
+  margin-bottom: 10px;                                    /*внешний отступ внизу элемента*/
+}
+
+.calc-screen p {           /*стиль значения на экране калькулятора*/                                  
+  text-align: right;       /*текст справа*/
+  font-size: 5rem;         /*размер шрифта*/
+  margin: 0;               /*внешний отступ с 4 сторон*/
+}
+
+.buttons {                   /*стиль блока с кнопками*/
+display: grid;                 /*создание сетки*/
+ grid-template-areas:         /*внешний отступ с 4 сторон*/
+ "ac plus-minus percent division" 
+ "seven eight nine multiply"
+ "four five six minus"
+ "one two three plus"
+ "zero zero dot equal";
+ grid-gap: 7px;                  /*промежутки между элементами внутри сетки*/
+ justify-items: center;                 /*выравнивание элементов сетки по горизонтали внутри своих ячеек*/
+}
+
+.btn{      /*стиль кнопок*/
+  width: 60px;     /*ширина*/
+  height: 60px;     /*высота*/
+  background-color: #157b76;     /*цвет*/
+  border-radius: 50%;      /*скругление*/
+  text-align: center;       /*текст на кнопках по центру в горизонтали*/
+  line-height: 60px;     /*ровняем текст по центру по вертикали*/
+  font-size: 1.5rem;      /*размер шрифта*/
+  font-weight: bold;    /*жирный шрифт*/
+  cursor: pointer;  /*вид курсора при наведении*/
+  user-select: none;  /*чтобы не выделялась при нескольких кликах*/
+  border: 3px solid #000000;     /*рамка*/
+}
+.btn.percent {     /*скрыла кнопку %*/
+  visibility: hidden;
+}
+.btn.plus-minus {
+  visibility: hidden;     /*скрыла кнопку +/-*/
+}
+
+.btn.zero {                      /*стиль кнопки 0*/
+  grid-area: zero;               /*область на сетке*/
+  width: 100%;                   /*ширина*/
+  border-radius: 34px;           /*скругление*/
+}
+
+.btn:hover {         /*стиль кнопки при наведении*/
+filter: brightness(120%);
+}
+
+.btn:active {          /*стиль кнопки при нажати*/
+  filter: brightness(90%);
+}
+
+.btn.bg-Pt {                  /*отдельно цвет для кнопки ac*/
+  background: #acecec;          
+}
+
+.btn.bg-Dt {
+  background: #00CED1;             /*цвет для кнопки действия*/
+}
